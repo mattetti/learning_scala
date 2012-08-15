@@ -1,0 +1,18 @@
+task :default => :compile
+
+desc "Compile the hello.scala source code and interpret it"
+task :compile do
+  print `scala hello.scala`
+end
+
+desc "create a jat file out of our file"
+task :to_jar do
+  print "interpreter output:\n"
+  print `scala -savecompiled hello.scala`
+  print "~~~\n"
+  print "A new jar file was added, here is the content of content of this folder:\n"
+  print `ls .`
+  print "~~~\n"
+  print "Here is the content of the jar:\n"
+  print `jar tvf hello.jar`
+end
