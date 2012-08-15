@@ -5,7 +5,7 @@ task :compile do
   print `scala hello.scala`
 end
 
-desc "create a jat file out of our file"
+desc "create a jar file out of our file"
 task :to_jar do
   print "interpreter output:\n"
   print `scala -savecompiled hello.scala`
@@ -15,4 +15,9 @@ task :to_jar do
   print "~~~\n"
   print "Here is the content of the jar:\n"
   print `jar tvf hello.jar`
+end
+
+desc "print cli argument"
+task :hello_you do
+  print `scala hello_2.scala matt`
 end
