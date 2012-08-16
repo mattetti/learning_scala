@@ -1,1 +1,2 @@
-System.out.println("Hello Scala!")
+// System.out.println("Hello Scala!")
+println("Hello Scala!")
